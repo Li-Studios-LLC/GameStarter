@@ -9,6 +9,7 @@ static struct runtime_t {
 } rt;
 
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
+    *appstate = static_cast<void*>(&rt);
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMEPAD);
 
     rt.width = 1280;
