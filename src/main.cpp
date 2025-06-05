@@ -15,6 +15,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
     rt.width = 1280;
     rt.height = 800;
     rt.window = SDL_CreateWindow("Game Starter Template", rt.width, rt.height, SDL_WINDOW_OPENGL);
+    SDL_AddGamepadMappingsFromFile("./Assets/gamecontrollerdb.txt");
 
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
