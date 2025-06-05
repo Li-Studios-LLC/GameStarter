@@ -36,6 +36,6 @@ endif()
 
 target_precompile_headers(LiGameStarter PUBLIC src/pch.h)
 target_link_libraries(LiGameStarter LiDependencies SDL3 OpenAL32)
-target_include_directories(LiGameStarter PUBLIC ${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/LiDependencies/Include)
-target_link_directories(LiGameStarter PUBLIC ${PROJECT_SOURCE_DIR}/LiDependencies/Lib)
+target_include_directories(LiGameStarter PUBLIC ${PROJECT_SOURCE_DIR}/src ${PROJECT_SOURCE_DIR}/LiDependencies/Include $ENV{VULKAN_SDK}/Include)
+target_link_directories(LiGameStarter PUBLIC ${PROJECT_SOURCE_DIR}/LiDependencies/Lib $ENV{VULKAN_SDK}/Lib)
 set_property(TARGET LiGameStarter PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
